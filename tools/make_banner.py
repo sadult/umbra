@@ -1,9 +1,10 @@
 """Renders docs/cover.png (GitHub banner) and docs/social.png with Qt. Run: python tools/make_banner.py"""
-import math, os, random, sys
+import os
+import random
+import sys
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 from PySide6.QtCore import QPointF, QRectF, Qt
-from PySide6.QtGui import (QColor, QFont, QGuiApplication, QImage, QLinearGradient, QPainter, QPainterPath, QPen,
-                           QRadialGradient, QTransform)
+from PySide6.QtGui import (QColor, QFont, QGuiApplication, QImage, QPainter, QPainterPath, QPen, QRadialGradient)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ACC = QColor(255, 178, 92)

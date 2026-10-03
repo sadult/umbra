@@ -23,7 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt pyinstaller pyflakes
       - name: Lint
-        run: python -m pyflakes umbra main.py || exit 0
+        run: python -m pyflakes umbra main.py tools
+      - name: Compile check
+        run: python -m compileall -q umbra main.py
       - name: Build
         run: >
           pyinstaller --noconfirm --clean --windowed --name Umbra

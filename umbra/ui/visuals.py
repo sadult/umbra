@@ -3,14 +3,14 @@ import math
 import time
 
 import numpy as np
-from PySide6.QtCore import QPointF, QRectF, Qt, QTimer, Signal
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QFont, QFontMetrics, QLinearGradient, QPainter,
-                           QPainterPath, QPen, QRadialGradient, QTextLayout, QTextOption)
+from PySide6.QtCore import QPointF, QRectF, Qt, QTimer
+from PySide6.QtGui import (QColor, QConicalGradient, QFont, QFontMetrics, QLinearGradient, QPainter, QPainterPath,
+                           QPen, QRadialGradient)
 from PySide6.QtWidgets import QWidget
 
 from . import icons
 from .context import ctx
-from .widgets import Tween, font, fmt_time
+from .widgets import Tween, font
 
 
 def _smooth_path(pts, close_y=None):

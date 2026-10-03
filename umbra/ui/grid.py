@@ -45,7 +45,6 @@ class CardDelegate(QStyledItemDelegate):
             return
         p.save()
         p.setRenderHints(QPainter.Antialiasing | QPainter.SmoothPixmapTransform)
-        th = ctx.theme
         r = QRectF(opt.rect)
         hov = idx.row() == self.v.hover_row
         k = self.v.hover_k if hov else 0.0

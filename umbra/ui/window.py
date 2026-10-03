@@ -2,16 +2,14 @@
 import os
 import time
 
-from PySide6.QtCore import QEasingCurve, QPoint, QPropertyAnimation, QRectF, QSize, Qt, QTimer, QVariantAnimation, Signal
-from PySide6.QtGui import QCursor, QAction, QColor, QIcon, QKeySequence, QPainter, QPixmap, QShortcut, QPen, QLinearGradient
+from PySide6.QtCore import QEasingCurve, QRectF, Qt, QTimer, QVariantAnimation, Signal
+from PySide6.QtGui import QCursor, QColor, QIcon, QKeySequence, QPainter, QPixmap, QShortcut, QPen, QLinearGradient
 from PySide6.QtWidgets import (QApplication, QFileDialog, QHBoxLayout, QSystemTrayIcon, QVBoxLayout, QWidget)
 
 from .. import winsys
 from ..config import APP_NAME, AUDIO_EXTS
-from ..library.db import album_artist
 from ..library.tags import read_tags
 from ..theme import PRESETS
-from . import icons
 from .about import AboutPage
 from .actions import _act
 from .chrome import PlayerBar, SidePanel, Sidebar, TitleBar, paint_logo
@@ -512,7 +510,7 @@ class MainWindow(QWidget):
         m = glass_menu(self)
         s = ctx.settings
         for n in PRESETS:
-            a = _act(m, ("●  " if s["theme"] == n else "    ") + n, "palette", lambda _=False, n=n: s.set("theme", n))
+            _act(m, ("●  " if s["theme"] == n else "    ") + n, "palette", lambda _=False, n=n: s.set("theme", n))
         m.addSeparator()
         for key, label_ in (("artwork", "Accent from artwork"), ("windows", "Accent from Windows"), ("wallpaper", "Accent from wallpaper"), ("theme", "Theme accent")):
             _act(m, ("✓  " if s["accent_source"] == key else "    ") + label_, "drop", lambda _=False, k=key: s.set("accent_source", k))

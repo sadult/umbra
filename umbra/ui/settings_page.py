@@ -1,20 +1,19 @@
 """Settings — appearance, audio, equalizer, library, lyrics, streaming, shortcuts."""
 import shutil
 
-from PySide6.QtCore import QPointF, QRectF, Qt, QTimer
+from PySide6.QtCore import QPointF, QRectF, Qt
 from PySide6.QtGui import QColor, QFont, QLinearGradient, QPainter, QPainterPath, QPen
-from PySide6.QtWidgets import (QColorDialog, QComboBox, QFrame, QGridLayout, QHBoxLayout, QScrollArea, QStackedWidget,
-                               QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QColorDialog, QComboBox, QFrame, QHBoxLayout, QScrollArea, QStackedWidget, QVBoxLayout,
+                               QWidget)
 
 from ..audio import decoder
 from ..audio.dsp import EQ_FREQS, EQ_LABELS, EQ_PRESETS, eq_response
 from ..config import cache_dir
 from ..library import streaming
 from ..theme import PRESETS
-from . import icons
 from .context import ctx
-from .widgets import (Caption, ChipButton, FlowLayout, IconButton, PillButton, Segmented, Slider, TextField, Toggle, VSlider,
-                      ask_text, confirm, font, label, paint_glass)
+from .widgets import (Caption, ChipButton, FlowLayout, PillButton, Segmented, Slider, TextField, Toggle, VSlider, ask_text,
+                      confirm, font, label, paint_glass)
 
 
 class Row(QWidget):

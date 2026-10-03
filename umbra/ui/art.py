@@ -4,7 +4,7 @@ import urllib.request
 from collections import OrderedDict
 
 from PySide6.QtCore import QObject, QRectF, QRunnable, Qt, QThreadPool, Signal
-from PySide6.QtGui import (QColor, QFont, QImage, QLinearGradient, QPainter, QPainterPath, QPixmap)
+from PySide6.QtGui import (QColor, QImage, QLinearGradient, QPainter, QPainterPath, QPixmap)
 
 from ..config import cache_dir, settings
 from ..library.tags import find_folder_art, get_embedded_art

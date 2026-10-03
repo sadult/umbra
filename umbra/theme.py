@@ -24,7 +24,7 @@ TEXT = QColor(244, 244, 248)
 def _vivid(colors):
     best, score = None, -1
     for c in colors:
-        h, s, v = c.hsvHueF(), c.hsvSaturationF(), c.valueF()
+        s, v = c.hsvSaturationF(), c.valueF()
         sc = s * 1.2 + v * 0.6 - abs(v - 0.7) * 0.4
         if sc > score:
             best, score = c, sc

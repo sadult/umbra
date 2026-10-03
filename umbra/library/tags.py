@@ -1,6 +1,5 @@
 """Format-agnostic tag reading / writing on top of Mutagen."""
 import base64
-import os
 import re
 from pathlib import Path
 

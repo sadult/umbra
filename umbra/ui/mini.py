@@ -3,13 +3,13 @@ and the progress drawn as a lit hairline along the bottom edge."""
 import time
 
 from PySide6.QtCore import QPointF, QRectF, Qt, QTimer
-from PySide6.QtGui import QColor, QFont, QFontMetrics, QLinearGradient, QPainter, QPen, QPixmap
+from PySide6.QtGui import QColor, QFont, QLinearGradient, QPainter, QPen, QPixmap
 from PySide6.QtWidgets import QHBoxLayout, QVBoxLayout, QWidget
 
 from ..theme import blur_image
 from .context import ctx
 from .visuals import Visualizer
-from .widgets import IconButton, Marquee, PlayButton, Tween, fmt_time, font, paint_crescent, rr_path
+from .widgets import IconButton, Marquee, PlayButton, Tween, fmt_time, font, rr_path
 
 W, H, RAD, COVER = 420, 124, 22, 96
 

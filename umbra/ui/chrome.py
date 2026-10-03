@@ -1,20 +1,19 @@
 """Window chrome: title bar, sidebar, player dock, queue/lyrics side panel."""
-import math
 import time
 
 from PySide6.QtCore import (QEasingCurve, QPoint, QPointF, QPropertyAnimation, QRect, QRectF, QSize, Qt, QTimer,
                             Signal)
 from PySide6.QtGui import QColor, QFont, QFontMetrics, QLinearGradient, QPainter, QPen, QRadialGradient
 from PySide6.QtWidgets import (QAbstractItemView, QHBoxLayout, QLabel, QListWidget, QListWidgetItem, QScrollArea,
-                               QSizePolicy, QStyle, QStyledItemDelegate, QVBoxLayout, QWidget, QFrame)
+                               QStyle, QStyledItemDelegate, QVBoxLayout, QWidget, QFrame)
 
 from ..config import APP_NAME
 from . import icons
 from .actions import track_menu
 from .context import ctx
-from .visuals import LyricsView, Visualizer
-from .widgets import (Badge, Caption, ChipButton, GlassPanel, IconButton, Marquee, PlayButton, SearchField, Segmented,
-                      Slider, Tween, ask_text, paint_crescent, fmt_long, fmt_time, font, label, paint_glass, anim_ms)
+from .visuals import Visualizer
+from .widgets import (Badge, Caption, ChipButton, GlassPanel, IconButton, Marquee, PlayButton, SearchField, Slider,
+                      Tween, ask_text, fmt_long, fmt_time, font, label, anim_ms)
 
 
 # ═══════════════════════════════════════════════════════════════ logo

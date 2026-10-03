@@ -1,7 +1,6 @@
 """About page — developer card (edit umbra/about_config.py)."""
 import os
 import platform
-import sys
 
 from PySide6.QtCore import QPointF, QRectF, Qt, QUrl, QTimer
 from PySide6.QtGui import QColor, QDesktopServices, QFont, QImage, QLinearGradient, QPainter, QPen, QRadialGradient
@@ -12,7 +11,6 @@ from ..about_config import CHANGELOG, CREDITS, DEVELOPER, PROJECT
 from ..config import APP_NAME, APP_TAGLINE, APP_VERSION, data_dir
 from . import icons
 from .art import rounded
-from .chrome import paint_logo
 from .context import ctx
 from .widgets import Badge, Caption, PillButton, font, label, paint_glass, rr_path
 
@@ -306,7 +304,6 @@ class AboutPage(QWidget):
         lay.addLayout(links)
         # ── your library, in numbers
         lay.addWidget(Caption("Your library, in numbers"))
-        s = ctx.lib.stats()
         self.stats = QHBoxLayout()
         self.stats.setSpacing(12)
         self.pills = {}

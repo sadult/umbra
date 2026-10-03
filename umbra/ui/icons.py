@@ -1,5 +1,5 @@
 """Umbra Glyphs — a custom hairline icon set (24×24, rounded 1.6px strokes)."""
-from PySide6.QtCore import QByteArray, QRectF, QSize, Qt
+from PySide6.QtCore import QByteArray, QRectF, Qt
 from PySide6.QtGui import QColor, QIcon, QPainter, QPixmap
 from PySide6.QtSvg import QSvgRenderer
 

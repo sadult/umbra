@@ -4,7 +4,6 @@ import subprocess
 import sys
 
 from PySide6.QtGui import QAction
-from PySide6.QtWidgets import QMenu
 
 from . import icons
 from .context import ctx

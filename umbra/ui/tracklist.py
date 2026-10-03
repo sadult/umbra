@@ -2,7 +2,7 @@
 import math
 import time
 
-from PySide6.QtCore import QAbstractListModel, QModelIndex, QPoint, QRect, QRectF, QSize, Qt, QTimer, Signal
+from PySide6.QtCore import QAbstractListModel, QModelIndex, QRectF, QSize, Qt, QTimer, Signal
 from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter, QPen
 from PySide6.QtWidgets import QAbstractItemView, QListView, QStyle, QStyledItemDelegate, QVBoxLayout, QWidget
 
@@ -353,14 +353,13 @@ class TrackList(QListView):
             if not idx.isValid():
                 return
             sel = [self.m.rows[idx.row()]]
-        on_rem = None
-        if self.playlist_id is not None:
-            rows = sorted(i.row() for i in self.selectionModel().selectedIndexes()) or [self.indexAt(pos).row()]
+        rows = sorted(i.row() for i in self.selectionModel().selectedIndexes()) or [self.indexAt(pos).row()]
 
-            def on_rem():
-                ctx.lib.remove_from_playlist(self.playlist_id, rows)
-                ctx.win.refresh_playlists()
-                ctx.win.reload_current()
+        def remove():
+            ctx.lib.remove_from_playlist(self.playlist_id, rows)
+            ctx.win.refresh_playlists()
+            ctx.win.reload_current()
+        on_rem = remove if self.playlist_id is not None else None
         m = track_menu(self, sel, self.playlist_id, on_rem)
         if m:
             m.exec(self.viewport().mapToGlobal(pos))

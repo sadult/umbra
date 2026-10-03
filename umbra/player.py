@@ -1,6 +1,5 @@
 """Playback controller: queue, shuffle/repeat, play counting, session restore."""
 import random
-import threading
 import time
 
 from PySide6.QtCore import QObject, QTimer, Signal

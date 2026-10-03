@@ -9,15 +9,15 @@ from pathlib import Path
 from PySide6.QtCore import QRectF, Qt, Signal, QObject
 from PySide6.QtGui import QColor, QFont, QImage, QPainter, QPen, QGuiApplication
 from PySide6.QtWidgets import (QApplication, QComboBox, QFileDialog, QGridLayout, QHBoxLayout, QPlainTextEdit,
-                               QStackedWidget, QVBoxLayout, QWidget, QLineEdit)
+                               QStackedWidget, QVBoxLayout, QWidget)
 
 from ..library.lyrics import lrclib_fetch, parse_lrc
 from ..library.tags import (filename_from_tags, find_folder_art, format_from_filename, get_embedded_art, read_tags,
                             write_tags)
 from . import icons
 from .context import ctx
-from .widgets import (Badge, Caption, ChipButton, GlassDialog, IconButton, PillButton, Segmented, TextField, ask_text,
-                      font, glass_menu, label)
+from .widgets import (Badge, Caption, ChipButton, GlassDialog, PillButton, Segmented, TextField, ask_text, font,
+                      glass_menu, label)
 from .actions import _act
 
 FIELDS = [("title", "Title"), ("artist", "Artist"), ("albumartist", "Album Artist"), ("album", "Album"),
@@ -290,7 +290,7 @@ class TagEditor(GlassDialog):
         else:
             self.art.set_data(arts[0], mixed=False) if len(uniq) == 1 else self.art.set_data(None, mixed=True)
         self._art_info()
-        t0, g0 = self.tracks[0], self.tags[0]
+        t0 = self.tracks[0]
         lines = []
         for t, g in list(zip(self.tracks, self.tags))[:30]:
             size = os.path.getsize(t["path"]) / 1e6
@@ -367,7 +367,7 @@ class TagEditor(GlassDialog):
                 with urllib.request.urlopen(url, timeout=15) as r:
                     data = r.read()
                 self._sig.done.emit("art", data)
-            except Exception as e:
+            except Exception:
                 self._sig.done.emit("art", None)
         threading.Thread(target=run, daemon=True).start()
 
@@ -443,7 +443,6 @@ class TagEditor(GlassDialog):
         ctx.toast(f"Numbered {self.n} tracks", "songs")
 
     def _titlecase(self):
-        import re
         small = {"a", "an", "the", "of", "in", "on", "and", "or", "to", "for", "at", "by"}
 
         def tc(s):

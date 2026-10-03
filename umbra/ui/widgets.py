@@ -2,11 +2,11 @@
 import math
 
 from PySide6.QtCore import (QEasingCurve, QEvent, QPoint, QPointF, QPropertyAnimation, QRect, QRectF, QSize, Qt,
-                            QTimer, QVariantAnimation, Signal, Property, QParallelAnimationGroup)
-from PySide6.QtGui import (QPixmap, QBrush, QColor, QCursor, QFont, QFontMetrics, QLinearGradient, QPainter, QPainterPath,
-                           QPen, QRadialGradient, QAction, QKeySequence)
+                            QTimer, QVariantAnimation, Signal, QParallelAnimationGroup)
+from PySide6.QtGui import (QPixmap, QBrush, QColor, QFont, QFontMetrics, QLinearGradient, QPainter, QPainterPath, QPen,
+                           QRadialGradient)
 from PySide6.QtWidgets import (QAbstractButton, QLayout, QDialog, QFrame, QGraphicsOpacityEffect, QHBoxLayout, QLabel,
-                               QLineEdit, QMenu, QSizePolicy, QStackedWidget, QVBoxLayout, QWidget, QGraphicsDropShadowEffect)
+                               QLineEdit, QMenu, QSizePolicy, QStackedWidget, QVBoxLayout, QWidget)
 
 from ..config import settings
 from ..theme import theme

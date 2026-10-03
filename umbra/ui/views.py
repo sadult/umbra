@@ -13,14 +13,13 @@ from ..library import streaming
 from ..library.db import album_artist
 from ..theme import hash_color
 from . import icons
-from .actions import track_menu, playlist_submenu, _act
+from .actions import playlist_submenu, _act
 from .context import ctx
-from .chrome import QueueList
 from .grid import CoverGrid
 from .tracklist import TrackListPanel, TrackList
 from .visuals import AnalyzerCard, LyricsView, Visualizer, VinylHero
-from .widgets import (FlowLayout, Badge, Caption, ChipButton, FadeStack, GlassPanel, IconButton, PillButton, PlayButton, Segmented, SearchField,
-                      TextField, ask_text, confirm, fmt_long, fmt_time, font, glass_menu, label, paint_glass)
+from .widgets import (FlowLayout, Badge, Caption, ChipButton, FadeStack, GlassPanel, IconButton, PillButton, Segmented, SearchField, ask_text,
+                      confirm, fmt_long, fmt_time, font, glass_menu, label, paint_glass)
 
 
 def scroll_page(parent):
@@ -212,7 +211,7 @@ class TrackPage(Page):
         lst = self.panel.list
         lst.playlist_id = None
         lst.date_mode = "added"
-        art, icon, rnd = None, None, False
+        art, icon = None, None
         if kind == "songs":
             rows = lib.tracks("source='local'", order=order)
             title, kick, icon = "Songs", "Library", "songs"

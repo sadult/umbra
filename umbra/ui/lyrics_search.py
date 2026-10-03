@@ -3,12 +3,12 @@ import threading
 
 from PySide6.QtCore import QObject, Qt, Signal
 from PySide6.QtGui import QColor, QFont, QFontMetrics, QPainter
-from PySide6.QtWidgets import (QDialog, QHBoxLayout, QListWidget, QListWidgetItem, QPlainTextEdit, QStyledItemDelegate,
-                               QAbstractItemView, QFrame)
+from PySide6.QtWidgets import (QHBoxLayout, QListWidget, QListWidgetItem, QPlainTextEdit, QStyledItemDelegate, QAbstractItemView,
+                               QFrame)
 
 from ..library.lyrics import lrclib_search, save_lyrics
 from .context import ctx
-from .widgets import Badge, GlassDialog, PillButton, SearchField, Toggle, fmt_time, font, label
+from .widgets import GlassDialog, PillButton, SearchField, Toggle, fmt_time, font, label
 
 
 class _Sig(QObject):
