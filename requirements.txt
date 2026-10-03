@@ -6,4 +6,4 @@ sounddevice>=0.4.6
 mutagen>=1.46
 yt-dlp>=2024.1.1
 # optional — richer YouTube Music search
-ytmusicapi>=1.5
+ytmusicapi>=1.12.3
