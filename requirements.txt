@@ -1,5 +1,5 @@
 PySide6>=6.5
-numpy>=1.24
+numpy>=2.5.3
 scipy>=1.10
 soundfile>=0.12
 sounddevice>=0.4.6
