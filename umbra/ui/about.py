@@ -254,7 +254,7 @@ class AboutPage(QWidget):
         hl.addWidget(name)
         hl.addWidget(label(APP_TAGLINE, 14, QFont.Medium, alpha=180))
         hl.addSpacing(8)
-        hl.addWidget(label("A local-first, lossless-friendly music player wrapped in liquid glass.\n"
+        hl.addWidget(label("A local-first, lossless-friendly music player with a clean glass interface.\n"
                            "Built for people who still curate their own library.", 9.8, alpha=135))
         hl.addStretch()
         br = QHBoxLayout()

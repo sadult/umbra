@@ -10,3 +10,27 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+
+# user media & local data (never upload)
+*.mp3
+*.flac
+*.wav
+*.m4a
+*.aac
+*.ogg
+*.opus
+*.wma
+*.aiff
+*.aif
+*.ape
+*.wv
+*.dsf
+*.webm
+*.part
+*.ytdl
+Music/
+music/
+Downloads/
+Umbra Downloads/
+settings.json
+library.db*

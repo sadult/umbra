@@ -1,0 +1,27 @@
+name: ✨ Feature request
+description: Suggest an idea for Umbra
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      placeholder: What would you like Umbra to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it help?
+      placeholder: The problem it solves or the workflow it improves.
+  - type: textarea
+    id: alt
+    attributes:
+      label: Alternatives you've considered
+  - type: checkboxes
+    id: check
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this hasn't been requested yet.
+          required: true

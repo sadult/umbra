@@ -113,7 +113,7 @@ def cover(out, W=1600, H=640):
     p.setPen(QColor(244, 238, 230, 150))
     p.setFont(F(17))
     p.drawText(QRectF(90, 432, 640, 60), Qt.AlignLeft | Qt.TextWordWrap,
-               "A local-first, lossless-friendly music player for Windows,\nwrapped in liquid glass.")
+               "A local-first, lossless-friendly music player for Windows,\nwith a clean glass interface.")
     x = 90
     p.setFont(F(12, QFont.Bold, 1.6, True))
     for t in ("LOSSLESS", "SYNCED LYRICS", "ANALYZER", "YT MUSIC · SPOTIFY"):

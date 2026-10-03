@@ -1,4 +1,4 @@
-"""Umbra main window — frameless liquid-glass shell."""
+"""Umbra main window — frameless glass shell."""
 import os
 import time
 

@@ -41,7 +41,7 @@ CHANGELOG = [
                "Download YouTube Music & Spotify tracks — tagged, with artwork",
                "Queue and lyrics fully separated · lyrics on/off toggle",
                "Every appearance setting now applies live"]),
-    ("1.0.0", ["First release — liquid-glass UI, 10-band EQ, analyzer, synced lyrics, tag editor, streaming"]),
+    ("1.0.0", ["First release — glass UI, 10-band EQ, analyzer, synced lyrics, tag editor, streaming"]),
 ]
 
 CREDITS = [

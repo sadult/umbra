@@ -44,7 +44,7 @@ DEFAULTS = {
     "ambient_motion": True,
     "animations": True,
     "anim_speed": 1.0,
-    "specular": True,                # cursor-following liquid highlight
+    "specular": True,                # cursor-following glass highlight
     "visualizer_style": "bars",      # bars | mirror | liquid | radial | scope
     "visualizer_bands": 56,
     "np_lyrics": True,               # Now Playing: show lyrics

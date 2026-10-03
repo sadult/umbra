@@ -18,4 +18,4 @@
 - Removed the small crescent marks; fixed Artists page flicker and resize glitches.
 
 ## 1.0.0
-- First release — liquid-glass UI, 10-band EQ, analyzer, synced lyrics, tag editor, streaming.
+- First release — glass UI, 10-band EQ, analyzer, synced lyrics, tag editor, streaming.

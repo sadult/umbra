@@ -1,4 +1,4 @@
-"""Umbra glass toolkit — liquid-glass panels and hand-painted controls."""
+"""Umbra glass toolkit — glass panels and hand-painted controls."""
 import math
 
 from PySide6.QtCore import (QEasingCurve, QEvent, QPoint, QPointF, QPropertyAnimation, QRect, QRectF, QSize, Qt,
@@ -170,7 +170,7 @@ def paint_glass(p: QPainter, widget: QWidget, r: QRectF, radius=None, level=1.0,
 
 
 class GlassPanel(QFrame):
-    """A floating liquid-glass island."""
+    """A floating glass island."""
 
     def __init__(self, parent=None, radius=None, level=1.0, specular=True, shadow=False):
         super().__init__(parent)

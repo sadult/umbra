@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.ico binary
+
+# keep GitHub language stats focused on the app
+docs/** linguist-documentation
+tools/** linguist-vendored=false

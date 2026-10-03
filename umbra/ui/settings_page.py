@@ -378,7 +378,7 @@ class SettingsPage(QWidget):
         v.addWidget(Row("Backdrop dim", "How much the backdrop is darkened.", RangeSlider("backdrop_dim", 0.2, 0.95, "{:.0%}")))
         v.addWidget(Row("Blur strength", "Frost of the artwork / wallpaper backdrop and the glass sampling it.", RangeSlider("backdrop_blur", 1, 5, "{:.0f}", 1, cast=int)))
         v.addWidget(Row("Corner radius", "Roundness of every glass island.", RangeSlider("radius", 6, 28, "{:.0f} px", 1, cast=int)))
-        v.addWidget(Row("Liquid highlight", "Specular light that follows your cursor across glass.", toggle("specular")))
+        v.addWidget(Row("Glass highlight", "Specular light that follows your cursor across glass.", toggle("specular")))
         v.addWidget(Row("Ambient motion", "The corona behind the glass slowly breathes.", toggle("ambient_motion")))
         v.addWidget(Row("Film grain", "A whisper of analog noise over the backdrop.", toggle("grain")))
         v.addWidget(Caption("Motion"))
@@ -389,7 +389,7 @@ class SettingsPage(QWidget):
                         toggle("np_lyrics")))
         v.addWidget(Row("Show audio analyzer", "Format, loudness and spectrum card beside the lyrics.", toggle("np_analyzer")))
         v.addWidget(Row("Show visualizer", "Spectrum strip along the bottom of Now Playing.", toggle("np_visualizer")))
-        v.addWidget(Row("Visualizer style", "Used everywhere the spectrum appears.", seg("visualizer_style", [("bars", "Bars"), ("mirror", "Mirror"), ("liquid", "Liquid"),
+        v.addWidget(Row("Visualizer style", "Used everywhere the spectrum appears.", seg("visualizer_style", [("bars", "Bars"), ("mirror", "Mirror"), ("liquid", "Flow"),
                                                              ("radial", "Radial"), ("scope", "Scope")])))
         v.addWidget(Row("Bands", "Spectrum resolution.", RangeSlider("visualizer_bands", 16, 96, "{:.0f}", 1, cast=int)))
         rs = ChipButton("Restart now", "refresh")

@@ -1,0 +1,63 @@
+name: 🐞 Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a bug! Please fill in as much as you can.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      placeholder: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to …
+        2. Click …
+        3. See …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: input
+    id: version
+    attributes:
+      label: Umbra version
+      description: Shown on the About page.
+      placeholder: "1.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Windows version
+      options: [Windows 11, Windows 10, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How do you run Umbra?
+      options: [Release exe, From source (python main.py)]
+  - type: dropdown
+    id: ffmpeg
+    attributes:
+      label: Is FFmpeg installed?
+      options: ["Yes", "No", "Not sure"]
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Playback / audio, Library / tags, Lyrics, Streaming / downloads, Interface, Other]
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots or logs
+      description: Drag images here or paste error output.
